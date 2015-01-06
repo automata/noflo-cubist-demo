@@ -1,0 +1,39 @@
+{
+  "name": "noflo-feature-demo",
+  "description": "Generates a Delaunay triangulation for a given image.",
+  "author": "Forrest Oliphant <forrest@sembiki.com>, Vilson Vieira <vilson@void.cc>",
+  "repo": "noflo/noflo-feature-demo",
+  "version": "0.1.0",
+  "keywords": [],
+  "dependencies": {
+    "noflo/noflo": "*",
+    "noflo/noflo-dom": "*",
+    "noflo/noflo-core": "*",
+    "noflo/noflo-interaction": "*",
+    "noflo/noflo-runtime-webrtc": "*",
+    "noflo/noflo-ccv": "*",
+    "noflo/noflo-canvas": "*",
+    "noflo/noflo-geometry": "*",
+    "noflo/noflo-image": "*",
+    "noflo/noflo-browserfile": "*"
+  },
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "scripts": [
+    "index.js",
+    "graphs/feature_demo.json",
+    "graphs/DuplicateCanvas.json"
+  ],
+  "json": [
+    "graphs/feature_demo.json",
+    "graphs/DuplicateCanvas.json",
+    "component.json"
+  ],
+  "noflo": {
+    "graphs": {
+      "DuplicateCanvas": "graphs/DuplicateCanvas.json",
+      "feature_demo": "graphs/feature_demo.json"
+    }
+  }
+}
