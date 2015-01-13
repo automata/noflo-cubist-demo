@@ -1,9 +1,11 @@
 {
     "properties": {
-        "name": "feature demo",
+        "name": "feature_demo",
         "environment": {
-            "type": "noflo-browser"
-        }
+            "type": "noflo-browser",
+            "content": "<button id='button'>Generate</button>"
+        },
+        "icon": ""
     },
     "inports": {},
     "outports": {},
@@ -228,8 +230,7 @@
             "tgt": {
                 "process": "dom/AppendChild_rsqi3",
                 "port": "parent"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -278,8 +279,7 @@
             "tgt": {
                 "process": "face",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -302,8 +302,7 @@
             "tgt": {
                 "process": "core/Output_oybs8",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -326,8 +325,7 @@
             "tgt": {
                 "process": "features",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -337,8 +335,7 @@
             "tgt": {
                 "process": "core/Output_oybs8",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -348,8 +345,7 @@
             "tgt": {
                 "process": "core/Output_oybs8",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -385,8 +381,7 @@
             "tgt": {
                 "process": "triangles",
                 "port": "items"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -409,8 +404,7 @@
             "tgt": {
                 "process": "dom/AppendChild_rsqi3",
                 "port": "child"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -459,8 +453,7 @@
             "tgt": {
                 "process": "canvas/Draw_447ix",
                 "port": "tick"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -470,8 +463,7 @@
             "tgt": {
                 "process": "canvas/Draw_447ix",
                 "port": "commands"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
