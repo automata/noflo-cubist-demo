@@ -2,7 +2,7 @@
   "name": "noflo-feature-demo",
   "description": "Generates a Delaunay triangulation for a given image.",
   "author": "Forrest Oliphant <forrest@sembiki.com>, Vilson Vieira <vilson@void.cc>",
-  "repo": "noflo/noflo-feature-demo",
+  "repo": "automata/noflo-feature-demo",
   "version": "0.1.0",
   "keywords": [],
   "dependencies": {
