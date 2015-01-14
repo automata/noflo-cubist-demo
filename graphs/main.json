@@ -3,7 +3,7 @@
         "name": "default/main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #000;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n\n<p>Mesh generator. Drop files here...</p>"
+            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #fff;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n\n<p>Mesh generator. Drop files here...</p>"
         },
         "icon": ""
     },
