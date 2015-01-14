@@ -3,7 +3,7 @@
         "name": "default/main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<p>Mesh generator. Drop files here...</p>"
+            "content": "<style>\n  body {\n    width: 100%;\n    height: 100%;\n    backgroun-color: #000;\n  }\n  a, p {\n    color: #fff;\n  }  \n</style>\n<p>Mesh generator. Drop files here...</p>"
         },
         "icon": ""
     },
@@ -443,8 +443,7 @@
             "tgt": {
                 "process": "core/Drop_gnkgq",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -454,8 +453,7 @@
             "tgt": {
                 "process": "GetDataTransfer",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -465,8 +463,7 @@
             "tgt": {
                 "process": "GetFiles",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -476,8 +473,7 @@
             "tgt": {
                 "process": "GetFirst",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -487,8 +483,7 @@
             "tgt": {
                 "process": "browserfile/ReadFile_vkixn",
                 "port": "file"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -498,8 +493,7 @@
             "tgt": {
                 "process": "image/UrlToCanvas_gzawh",
                 "port": "url"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -522,8 +516,7 @@
             "tgt": {
                 "process": "ListenDragOver",
                 "port": "element"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -612,13 +605,6 @@
             }
         },
         {
-            "data": "datatransfer",
-            "tgt": {
-                "process": "GetDataTransfer",
-                "port": "key"
-            }
-        },
-        {
             "data": "files",
             "tgt": {
                 "process": "GetFiles",
@@ -651,6 +637,13 @@
             "tgt": {
                 "process": "triangles",
                 "port": "strokestyle"
+            }
+        },
+        {
+            "data": "dataTransfer",
+            "tgt": {
+                "process": "GetDataTransfer",
+                "port": "key"
             }
         }
     ]
