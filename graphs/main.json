@@ -255,6 +255,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/Drop_vs260": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 468,
+                "y": 720,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -530,6 +540,17 @@
             "metadata": {
                 "route": 0
             }
+        },
+        {
+            "src": {
+                "process": "feat",
+                "port": "canvas"
+            },
+            "tgt": {
+                "process": "core/Drop_vs260",
+                "port": "in"
+            },
+            "metadata": {}
         },
         {
             "data": "body",
