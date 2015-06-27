@@ -239,6 +239,36 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "canvas/ClearRect_sc25k": {
+            "component": "canvas/ClearRect",
+            "metadata": {
+                "label": "canvas/ClearRect",
+                "x": 612,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RepeatAsync_20w4u": {
+            "component": "core/RepeatAsync",
+            "metadata": {
+                "label": "core/RepeatAsync",
+                "x": 72,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "canvas/MakePoint_al12n": {
+            "component": "canvas/MakePoint",
+            "metadata": {
+                "label": "canvas/MakePoint",
+                "x": 504,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -426,17 +456,6 @@
         },
         {
             "src": {
-                "process": "canvas/Fill_3wdp",
-                "port": "fill"
-            },
-            "tgt": {
-                "process": "canvas/Draw_447ix",
-                "port": "commands"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "Canvas",
                 "port": "element"
             },
@@ -483,11 +502,46 @@
         },
         {
             "src": {
+                "process": "ImageHeight",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "CanvasHeight",
+                "port": "value"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
                 "process": "CreateCanvas",
                 "port": "canvas"
             },
             "tgt": {
+                "process": "core/RepeatAsync_20w4u",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatAsync_20w4u",
+                "port": "out"
+            },
+            "tgt": {
                 "process": "ImageWidth",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RepeatAsync_20w4u",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ImageHeight",
                 "port": "element"
             },
             "metadata": {
@@ -496,12 +550,47 @@
         },
         {
             "src": {
-                "process": "CreateCanvas",
-                "port": "canvas"
+                "process": "canvas/MakePoint_al12n",
+                "port": "point"
             },
             "tgt": {
-                "process": "ImageHeight",
-                "port": "element"
+                "process": "canvas/ClearRect_sc25k",
+                "port": "point"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "canvas/ClearRect_sc25k",
+                "port": "clearRect"
+            },
+            "tgt": {
+                "process": "canvas/Draw_447ix",
+                "port": "commands"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "canvas/Fill_3wdp",
+                "port": "fill"
+            },
+            "tgt": {
+                "process": "canvas/Draw_447ix",
+                "port": "commands"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "ImageWidth",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/ClearRect_sc25k",
+                "port": "width"
             },
             "metadata": {
                 "route": 0
@@ -513,10 +602,12 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "CanvasHeight",
-                "port": "value"
+                "process": "canvas/ClearRect_sc25k",
+                "port": "height"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 0
+            }
         },
         {
             "data": true,
@@ -621,6 +712,20 @@
             "tgt": {
                 "process": "CanvasHeight",
                 "port": "attribute"
+            }
+        },
+        {
+            "data": 0,
+            "tgt": {
+                "process": "canvas/MakePoint_al12n",
+                "port": "x"
+            }
+        },
+        {
+            "data": 0,
+            "tgt": {
+                "process": "canvas/MakePoint_al12n",
+                "port": "y"
             }
         }
     ]
