@@ -3,7 +3,7 @@
         "name": "main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #eee;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n<canvas id=\"canvas\"></canvas>\n<p>Cubist Demo. Drop image files here...</p>"
+            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #eee;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n<p>Cubist Demo. Drop image files here...</p>\n<canvas id=\"canvas\" width=\"100%\"></canvas>"
         },
         "icon": ""
     },
