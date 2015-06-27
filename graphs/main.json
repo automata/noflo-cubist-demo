@@ -29,11 +29,49 @@
             }
         },
         {
+            "name": "Create canvas",
+            "nodes": [
+                "Canvas",
+                "CanvasHeight",
+                "CanvasWidth",
+                "ImageHeight",
+                "ImageWidth",
+                "core/RepeatAsync_3we03"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
             "name": "Clear canvas",
             "nodes": [
                 "canvas/Fill_fqbta",
                 "canvas/MakePoint_al12n",
-                "canvas/MakeRectangle_t4zer"
+                "canvas/MakeRectangle_t4zer",
+                "dom/GetAttribute_ealjn",
+                "dom/GetAttribute_own1z"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Analyse image",
+            "nodes": [
+                "DropErrors",
+                "FeaturePoints"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Create and draw a mesh",
+            "nodes": [
+                "Colors",
+                "Triangles",
+                "canvas/Draw_447ix",
+                "canvas/Fill_3wdp"
             ],
             "metadata": {
                 "description": ""
@@ -55,8 +93,8 @@
             "component": "canvas/Draw",
             "metadata": {
                 "label": "canvas/Draw",
-                "x": 864,
-                "y": 648,
+                "x": 1152,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -65,8 +103,8 @@
             "component": "image/GetFeaturesYAPE",
             "metadata": {
                 "label": "FeaturePoints",
-                "x": 180,
-                "y": 720,
+                "x": 252,
+                "y": 756,
                 "width": 72,
                 "height": 72
             }
@@ -75,8 +113,8 @@
             "component": "geometry/Delaunay",
             "metadata": {
                 "label": "Triangles",
-                "x": 324,
-                "y": 720,
+                "x": 612,
+                "y": 792,
                 "width": 72,
                 "height": 72
             }
@@ -175,8 +213,8 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "DropErrors",
-                "x": 180,
-                "y": 828,
+                "x": 252,
+                "y": 864,
                 "width": 72,
                 "height": 72
             }
@@ -185,8 +223,8 @@
             "component": "image/GetColorsFromCentroids",
             "metadata": {
                 "label": "Colors",
-                "x": 576,
-                "y": 648,
+                "x": 864,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -195,8 +233,8 @@
             "component": "canvas/Fill",
             "metadata": {
                 "label": "canvas/Fill",
-                "x": 720,
-                "y": 648,
+                "x": 1008,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -205,8 +243,8 @@
             "component": "dom/GetElement",
             "metadata": {
                 "label": "Canvas",
-                "x": 324,
-                "y": 324,
+                "x": 396,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -215,8 +253,8 @@
             "component": "dom/GetAttribute",
             "metadata": {
                 "label": "ImageWidth",
-                "x": 180,
-                "y": 432,
+                "x": 252,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -225,8 +263,8 @@
             "component": "dom/GetAttribute",
             "metadata": {
                 "label": "ImageHeight",
-                "x": 180,
-                "y": 540,
+                "x": 252,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -235,8 +273,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "CanvasWidth",
-                "x": 324,
-                "y": 432,
+                "x": 396,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -245,8 +283,8 @@
             "component": "dom/SetAttribute",
             "metadata": {
                 "label": "CanvasHeight",
-                "x": 324,
-                "y": 540,
+                "x": 396,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -255,8 +293,8 @@
             "component": "canvas/MakePoint",
             "metadata": {
                 "label": "canvas/MakePoint",
-                "x": 684,
-                "y": 324,
+                "x": 828,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -265,8 +303,8 @@
             "component": "canvas/MakeRectangle",
             "metadata": {
                 "label": "canvas/MakeRectangle",
-                "x": 684,
-                "y": 432,
+                "x": 828,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -275,8 +313,8 @@
             "component": "canvas/Fill",
             "metadata": {
                 "label": "canvas/Fill",
-                "x": 828,
-                "y": 432,
+                "x": 972,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -285,8 +323,8 @@
             "component": "core/RepeatAsync",
             "metadata": {
                 "label": "core/RepeatAsync",
-                "x": 36,
-                "y": 432,
+                "x": 108,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -295,8 +333,8 @@
             "component": "dom/GetAttribute",
             "metadata": {
                 "label": "ImageWidth",
-                "x": 504,
-                "y": 432,
+                "x": 648,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -305,8 +343,8 @@
             "component": "dom/GetAttribute",
             "metadata": {
                 "label": "ImageHeight",
-                "x": 504,
-                "y": 540,
+                "x": 648,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -323,7 +361,7 @@
                 "port": "canvas"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
@@ -336,7 +374,7 @@
                 "port": "points"
             },
             "metadata": {
-                "route": 0
+                "route": 4
             }
         },
         {
@@ -347,6 +385,9 @@
             "tgt": {
                 "process": "DropEvent",
                 "port": "in"
+            },
+            "metadata": {
+                "route": 10
             }
         },
         {
@@ -443,6 +484,9 @@
             "tgt": {
                 "process": "DropErrors",
                 "port": "in"
+            },
+            "metadata": {
+                "route": 10
             }
         },
         {
@@ -455,7 +499,7 @@
                 "port": "canvas"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
@@ -468,7 +512,7 @@
                 "port": "paths"
             },
             "metadata": {
-                "route": 0
+                "route": 4
             }
         },
         {
@@ -492,7 +536,7 @@
                 "port": "items"
             },
             "metadata": {
-                "route": 0
+                "route": 4
             }
         },
         {
@@ -528,7 +572,9 @@
                 "process": "canvas/Draw_447ix",
                 "port": "canvas"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 9
+            }
         },
         {
             "src": {
@@ -585,7 +631,9 @@
                 "process": "canvas/Draw_447ix",
                 "port": "commands"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 3
+            }
         },
         {
             "src": {
@@ -597,7 +645,7 @@
                 "port": "commands"
             },
             "metadata": {
-                "route": null
+                "route": 4
             }
         },
         {
@@ -610,7 +658,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
@@ -622,7 +670,9 @@
                 "process": "ImageWidth",
                 "port": "element"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 6
+            }
         },
         {
             "src": {
@@ -634,7 +684,7 @@
                 "port": "element"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
@@ -647,7 +697,7 @@
                 "port": "element"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
@@ -660,7 +710,7 @@
                 "port": "element"
             },
             "metadata": {
-                "route": 0
+                "route": 6
             }
         },
         {
