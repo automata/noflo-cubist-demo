@@ -3,7 +3,7 @@
         "name": "main",
         "environment": {
             "type": "noflo-browser",
-            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #fff;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n\n<p>Mesh generator. Drop files here...</p>"
+            "content": "<style>\n  html {\n    height: 100%;\n  }\n  body {\n    width: 98%;\n    min-height: 100%;\n    background-color: #000;\n    color: #eee;\n    font-family: sans-serif;\n  }\n  a {\n    float: right;\n  }\n</style>\n<canvas id=\"canvas\"></canvas>\n<p>Cubist Demo. Drop image files here...</p>"
         },
         "icon": ""
     },
@@ -42,26 +42,6 @@
                 "label": "image/UrlToCanvas",
                 "x": 0,
                 "y": 648,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/AppendChild_rsqi3": {
-            "component": "dom/AppendChild",
-            "metadata": {
-                "label": "dom/AppendChild",
-                "x": 432,
-                "y": 900,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/GetElement_wwoen": {
-            "component": "dom/GetElement",
-            "metadata": {
-                "label": "dom/GetElement",
-                "x": 288,
-                "y": 936,
                 "width": 72,
                 "height": 72
             }
@@ -142,16 +122,6 @@
                 "label": "canvas/DrawImage",
                 "x": 756,
                 "y": 576,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "DuplicateCanvas": {
-            "component": "feature-demo/DuplicateCanvas",
-            "metadata": {
-                "label": "DuplicateCanvas",
-                "x": 288,
-                "y": 828,
                 "width": 72,
                 "height": 72
             }
@@ -285,19 +255,19 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "dom/GetElement_tm855": {
+            "component": "dom/GetElement",
+            "metadata": {
+                "label": "dom/GetElement",
+                "x": 1044,
+                "y": 684,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
-        {
-            "src": {
-                "process": "dom/GetElement_wwoen",
-                "port": "element"
-            },
-            "tgt": {
-                "process": "dom/AppendChild_rsqi3",
-                "port": "parent"
-            }
-        },
         {
             "src": {
                 "process": "image/UrlToCanvas_gzawh",
@@ -368,42 +338,6 @@
             "tgt": {
                 "process": "triangles",
                 "port": "items"
-            }
-        },
-        {
-            "src": {
-                "process": "DuplicateCanvas",
-                "port": "dupe_canvas"
-            },
-            "tgt": {
-                "process": "dom/AppendChild_rsqi3",
-                "port": "child"
-            }
-        },
-        {
-            "src": {
-                "process": "image/UrlToCanvas_gzawh",
-                "port": "canvas"
-            },
-            "tgt": {
-                "process": "DuplicateCanvas",
-                "port": "canvas"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "DuplicateCanvas",
-                "port": "dupe_canvas"
-            },
-            "tgt": {
-                "process": "canvas/Draw_447ix",
-                "port": "canvas"
-            },
-            "metadata": {
-                "route": 0
             }
         },
         {
@@ -633,11 +567,15 @@
             "metadata": {}
         },
         {
-            "data": "body",
+            "src": {
+                "process": "dom/GetElement_tm855",
+                "port": "element"
+            },
             "tgt": {
-                "process": "dom/GetElement_wwoen",
-                "port": "selector"
-            }
+                "process": "canvas/Draw_447ix",
+                "port": "canvas"
+            },
+            "metadata": {}
         },
         {
             "data": true,
@@ -745,6 +683,13 @@
             "tgt": {
                 "process": "GetDataTransfer",
                 "port": "key"
+            }
+        },
+        {
+            "data": "#canvas",
+            "tgt": {
+                "process": "dom/GetElement_tm855",
+                "port": "selector"
             }
         }
     ]
