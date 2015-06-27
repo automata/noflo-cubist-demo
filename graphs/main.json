@@ -280,6 +280,36 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/RepeatAsync_3we03": {
+            "component": "core/RepeatAsync",
+            "metadata": {
+                "label": "core/RepeatAsync",
+                "x": 36,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "dom/GetAttribute_own1z": {
+            "component": "dom/GetAttribute",
+            "metadata": {
+                "label": "ImageWidth",
+                "x": 504,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "dom/GetAttribute_ealjn": {
+            "component": "dom/GetAttribute",
+            "metadata": {
+                "label": "ImageHeight",
+                "x": 504,
+                "y": 540,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -537,32 +567,6 @@
         },
         {
             "src": {
-                "process": "ImageWidth",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/MakeRectangle_t4zer",
-                "port": "width"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "ImageHeight",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/MakeRectangle_t4zer",
-                "port": "height"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
                 "process": "canvas/MakeRectangle_t4zer",
                 "port": "rectangle"
             },
@@ -602,7 +606,31 @@
                 "port": "canvas"
             },
             "tgt": {
+                "process": "core/RepeatAsync_3we03",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RepeatAsync_3we03",
+                "port": "out"
+            },
+            "tgt": {
                 "process": "ImageWidth",
+                "port": "element"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RepeatAsync_3we03",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ImageHeight",
                 "port": "element"
             },
             "metadata": {
@@ -615,12 +643,47 @@
                 "port": "canvas"
             },
             "tgt": {
-                "process": "ImageHeight",
+                "process": "dom/GetAttribute_own1z",
                 "port": "element"
             },
             "metadata": {
                 "route": 0
             }
+        },
+        {
+            "src": {
+                "process": "CreateCanvas",
+                "port": "canvas"
+            },
+            "tgt": {
+                "process": "dom/GetAttribute_ealjn",
+                "port": "element"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "dom/GetAttribute_own1z",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_t4zer",
+                "port": "width"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "dom/GetAttribute_ealjn",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_t4zer",
+                "port": "height"
+            },
+            "metadata": {}
         },
         {
             "data": true,
@@ -746,6 +809,20 @@
             "tgt": {
                 "process": "canvas/Fill_fqbta",
                 "port": "fillstyle"
+            }
+        },
+        {
+            "data": "width",
+            "tgt": {
+                "process": "dom/GetAttribute_own1z",
+                "port": "attribute"
+            }
+        },
+        {
+            "data": "height",
+            "tgt": {
+                "process": "dom/GetAttribute_ealjn",
+                "port": "attribute"
             }
         }
     ]
