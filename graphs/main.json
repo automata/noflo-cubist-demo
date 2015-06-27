@@ -27,6 +27,17 @@
             "metadata": {
                 "description": ""
             }
+        },
+        {
+            "name": "Clear canvas",
+            "nodes": [
+                "canvas/Fill_fqbta",
+                "canvas/MakePoint_al12n",
+                "canvas/MakeRectangle_t4zer"
+            ],
+            "metadata": {
+                "description": ""
+            }
         }
     ],
     "processes": {
@@ -236,16 +247,6 @@
                 "label": "CanvasHeight",
                 "x": 324,
                 "y": 540,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/RepeatAsync_20w4u": {
-            "component": "core/RepeatAsync",
-            "metadata": {
-                "label": "core/RepeatAsync",
-                "x": 72,
-                "y": 432,
                 "width": 72,
                 "height": 72
             }
@@ -523,43 +524,6 @@
         },
         {
             "src": {
-                "process": "CreateCanvas",
-                "port": "canvas"
-            },
-            "tgt": {
-                "process": "core/RepeatAsync_20w4u",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "core/RepeatAsync_20w4u",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "ImageWidth",
-                "port": "element"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "core/RepeatAsync_20w4u",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "ImageHeight",
-                "port": "element"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
                 "process": "canvas/MakePoint_al12n",
                 "port": "point"
             },
@@ -630,6 +594,32 @@
             },
             "metadata": {
                 "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "CreateCanvas",
+                "port": "canvas"
+            },
+            "tgt": {
+                "process": "ImageWidth",
+                "port": "element"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "CreateCanvas",
+                "port": "canvas"
+            },
+            "tgt": {
+                "process": "ImageHeight",
+                "port": "element"
+            },
+            "metadata": {
+                "route": 0
             }
         },
         {
