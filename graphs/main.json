@@ -240,16 +240,6 @@
                 "height": 72
             }
         },
-        "canvas/ClearRect_sc25k": {
-            "component": "canvas/ClearRect",
-            "metadata": {
-                "label": "canvas/ClearRect",
-                "x": 612,
-                "y": 432,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/RepeatAsync_20w4u": {
             "component": "core/RepeatAsync",
             "metadata": {
@@ -264,7 +254,27 @@
             "component": "canvas/MakePoint",
             "metadata": {
                 "label": "canvas/MakePoint",
-                "x": 504,
+                "x": 684,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "canvas/MakeRectangle_t4zer": {
+            "component": "canvas/MakeRectangle",
+            "metadata": {
+                "label": "canvas/MakeRectangle",
+                "x": 684,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "canvas/Fill_fqbta": {
+            "component": "canvas/Fill",
+            "metadata": {
+                "label": "canvas/Fill",
+                "x": 828,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -554,15 +564,54 @@
                 "port": "point"
             },
             "tgt": {
-                "process": "canvas/ClearRect_sc25k",
+                "process": "canvas/MakeRectangle_t4zer",
                 "port": "point"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "ImageWidth",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_t4zer",
+                "port": "width"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "ImageHeight",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "canvas/MakeRectangle_t4zer",
+                "port": "height"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "canvas/MakeRectangle_t4zer",
+                "port": "rectangle"
+            },
+            "tgt": {
+                "process": "canvas/Fill_fqbta",
+                "port": "items"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "canvas/ClearRect_sc25k",
-                "port": "clearRect"
+                "process": "canvas/Fill_fqbta",
+                "port": "fill"
             },
             "tgt": {
                 "process": "canvas/Draw_447ix",
@@ -581,32 +630,6 @@
             },
             "metadata": {
                 "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "ImageWidth",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/ClearRect_sc25k",
-                "port": "width"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "ImageHeight",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "canvas/ClearRect_sc25k",
-                "port": "height"
-            },
-            "metadata": {
-                "route": 0
             }
         },
         {
@@ -726,6 +749,13 @@
             "tgt": {
                 "process": "canvas/MakePoint_al12n",
                 "port": "y"
+            }
+        },
+        {
+            "data": "rgb(0,0,0)",
+            "tgt": {
+                "process": "canvas/Fill_fqbta",
+                "port": "fillstyle"
             }
         }
     ]
