@@ -1,5 +1,5 @@
 /*
- * This file can be used for general library features of noflo-feature-demo.
+ * This file can be used for general library features of noflo-cubist-demo.
  *
  * The library features can be made available as CommonJS modules that the
  * components in this project utilize.

@@ -1,14 +1,14 @@
 {
-  "name": "noflo-feature-demo",
-  "description": "Generates a Delaunay triangulation for a given image.",
+  "name": "noflo-cubist-demo",
+  "description": "Generates a colored Delaunay triangulation for a given image.",
   "version": "0.1.0",
   "author": {
-    "name": "Forrest Oliphant",
-    "email": "forrest@sembiki.com"
+    "name": "Vilson Vieira",
+    "email": "vilson@thegrid.io"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/automata/noflo-feature-demo.git"
+    "url": "git://github.com/automata/noflo-cubist-demo.git"
   },
   "licenses": [
     {
